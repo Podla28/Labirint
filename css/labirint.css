@@ -1,0 +1,250 @@
+*{
+
+	margin: 0;
+	padding: 0;
+
+}
+@font-face{
+	font-family:frost;
+	src:url("FROSTY.TTF");
+}
+
+body{
+
+	background: url("../slike/bg2.png");
+	background-repeat: no-repeat;
+	background-size: cover;
+	/*font-family: frost;
+	*/
+
+	height: 850px;
+
+	font-family: "Open Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+}
+
+
+h1{
+	text-align: center;
+	display: block;
+	margin: 0 auto;
+	font-family: frost;
+	letter-spacing: 5px;
+	font-size: 50px;
+
+}
+
+.main{
+	position: relative;
+	text-align: center;
+	background-position: center;
+
+	top: -250px;
+
+}
+
+.labirint{
+	position: absolute;
+	width: 484px;
+	height: 484px;
+	margin-left: auto;
+	margin-right: auto;
+	left: 0;
+	right: 0;
+	top: 270px;
+
+}
+canvas{
+
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+
+
+}
+
+svg{
+
+	display: block;
+	position: absolute;
+	left: 0;
+	right: 0;
+
+}
+
+
+
+
+.play{
+	width: 70px;
+	height: 70px;
+	display: block;
+	cursor: pointer;
+
+}
+
+.restart{
+	width: 70px;
+	height: 70px;
+	display: block;
+	cursor: pointer;
+
+}
+
+.pause{
+	width: 70px;
+	height: 70px;
+	display: block;
+	cursor: pointer;
+}
+
+.info{
+	width: 70px;
+	height: 70px;
+	display: block;
+	cursor: pointer;
+}
+
+.container{
+
+	display: flex;
+	justify-content: space-between;
+	margin: 0 auto;
+	width: 484px;
+	margin-top: 50px;
+}
+
+.slider{
+
+	position: relative;
+	top: 800px;
+	/*font-family: frost;*/
+	letter-spacing: 3px;
+
+}
+
+.play:hover{
+	background: #00ccff;
+	clip-path: circle(29px at center);
+}
+
+.pause:hover{
+	background: #00ccff;
+	clip-path: circle(29px at center);
+}
+
+.info:hover{
+	background: #00ccff;
+	clip-path: circle(29px at center);
+}
+
+.restart:hover{
+	-webkit-animation:spin 1s ease-in-out infinite;
+  -moz-animation:spin 1s ease-in-out infinite;
+  animation:spin 1s ease-in-out infinite;
+
+}
+
+
+
+@-moz-keyframes spin {
+	 100% { -moz-transform: rotate(360deg); }
+  }
+
+@-webkit-keyframes spin {
+	from {
+    -webkit-transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(359deg);
+  }
+}
+
+@keyframes spin { 100% { -webkit-transform: rotate(360deg); transform:rotate(360deg); } }
+
+input[type=range] {
+  -webkit-appearance: none;
+
+  margin: 11.8px 0;
+}
+input[type=range]:focus {
+  outline: none;
+}
+input[type=range]::-webkit-slider-runnable-track {
+
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  background: #3071a9;
+  border-radius: 1.4px;
+  border: 0.3px solid #010101;
+}
+input[type=range]::-webkit-slider-thumb {
+  box-shadow: 0px 0px 0.8px #000000, 0px 0px 0px #0d0d0d;
+  border: 0px solid #000000;
+  height: 32px;
+  width: 15px;
+  border-radius: 13px;
+  background: #ffffff;
+  cursor: pointer;
+  -webkit-appearance: none;
+  margin-top: -12.1px;
+}
+input[type=range]:focus::-webkit-slider-runnable-track {
+  background: #367ebd;
+}
+input[type=range]::-moz-range-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+  background: #3071a9;
+  border-radius: 1.4px;
+  border: 0.3px solid #010101;
+}
+input[type=range]::-moz-range-thumb {
+  box-shadow: 0px 0px 0.8px #000000, 0px 0px 0px #0d0d0d;
+  border: 0px solid #000000;
+  height: 32px;
+  width: 15px;
+  border-radius: 13px;
+  background: #ffffff;
+  cursor: pointer;
+}
+input[type=range]::-ms-track {
+  width: 100%;
+  height: 8.4px;
+  cursor: pointer;
+  background: transparent;
+  border-color: transparent;
+  color: transparent;
+}
+input[type=range]::-ms-fill-lower {
+  background: #2a6495;
+  border: 0.3px solid #010101;
+  border-radius: 2.8px;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+}
+input[type=range]::-ms-fill-upper {
+  background: #3071a9;
+  border: 0.3px solid #010101;
+  border-radius: 2.8px;
+  box-shadow: 0px 0px 0px #000000, 0px 0px 0px #0d0d0d;
+}
+input[type=range]::-ms-thumb {
+  box-shadow: 0px 0px 0.8px #000000, 0px 0px 0px #0d0d0d;
+  border: 0px solid #000000;
+  height: 32px;
+  width: 15px;
+  border-radius: 13px;
+  background: #ffffff;
+  cursor: pointer;
+  height: 8.4px;
+}
+input[type=range]:focus::-ms-fill-lower {
+  background: #3071a9;
+}
+input[type=range]:focus::-ms-fill-upper {
+  background: #367ebd;
+}
